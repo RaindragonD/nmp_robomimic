@@ -11,7 +11,7 @@ import shutil
 import json
 import h5py
 import imageio
-from neural_mp.combine_hdf5 import write_trajectory_to_dataset
+# from neural_mp.combine_hdf5 import write_trajectory_to_dataset
 import numpy as np
 from copy import deepcopy
 from collections import OrderedDict

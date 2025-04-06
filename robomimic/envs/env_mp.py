@@ -12,10 +12,10 @@ from tqdm import tqdm
 import gymnasium
 
 from omegaconf import DictConfig, OmegaConf
-from neural_mp.utils.franka_utils import normalize_franka_joints
+# from neural_mp.utils.franka_utils import normalize_franka_joints
 import robomimic.envs.env_base as EB
 import robomimic.utils.obs_utils as ObsUtils
-from neural_mp.envs import *
+# from neural_mp.envs import *
 
 import os
 import torch
@@ -23,7 +23,7 @@ import torch
 # Util function for loading point clouds|
 import numpy as np
 
-from utils.pcd_utils import compute_full_pcd, depth_to_rgb
+# from utils.pcd_utils import compute_full_pcd, depth_to_rgb
 import h5py
 
 class EnvMP(EB.EnvBase, gymnasium.Env):
@@ -292,8 +292,8 @@ class EnvMP(EB.EnvBase, gymnasium.Env):
         ep = 'demo_' + str(traj['info'][0]['ep'])
         dataset_name = os.path.basename(self.dataset_path).replace('.hdf5', '')
         data_path = f'planners/{dataset_name}/{ep}.pkl'
-        import neural_mp
-        data_path = os.path.join(os.path.dirname(neural_mp.__file__)[:-len('neural_mp')], data_path)
+        # import neural_mp
+        # data_path = os.path.join(os.path.dirname(neural_mp.__file__)[:-len('neural_mp')], data_path)
         current_angles = self.hdf5_file["data/{}/obs/current_angles".format(ep)][()][0]
         target_angles = self.hdf5_file["data/{}/obs/goal_angles".format(ep)][()][0]
         planner, pdef = self.env.load_planner_from_data(data_path, current_angles, target_angles)

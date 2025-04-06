@@ -61,9 +61,9 @@ from copy import deepcopy
 
 import torch
 from tqdm import tqdm
-from neural_mp.envs.franka_pybullet_env import decompose_scene_pcd_params_obs_batched
-from neural_mp.utils.franka_utils import normalize_franka_joints
-from neural_mp.utils.mpinets_loss import CollisionAndBCLossContainer
+# from neural_mp.envs.franka_pybullet_env import decompose_scene_pcd_params_obs_batched
+# from neural_mp.utils.franka_utils import normalize_franka_joints
+# from neural_mp.utils.mpinets_loss import CollisionAndBCLossContainer
 
 import robomimic
 import robomimic.utils.file_utils as FileUtils

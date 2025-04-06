@@ -62,7 +62,7 @@ import argparse
 import imageio
 import numpy as np
 import torch
-from utils.pcd_utils import compute_full_pcd, depth_to_rgb
+# from utils.pcd_utils import compute_full_pcd, depth_to_rgb
 
 import robomimic.utils.obs_utils as ObsUtils
 import robomimic.utils.env_utils as EnvUtils
